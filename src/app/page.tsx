@@ -6,10 +6,10 @@ import { motion } from "framer-motion";
 export default function Home() {
   return (
     <div className="relative h-screen">
-      <div
+      {/* <div
         className="absolute inset-0 bg-cover bg-center blur-sm h-[512]"
         style={{ backgroundImage: "url('/frontier.avif')" }}
-      ></div>
+      ></div> */}
       <div className="relative z-10">
         <Nav
           className="fade-in-top"
@@ -51,6 +51,14 @@ const Welcome = () => (
       transition={{ delay: 1.5, duration: 1 }}
     >
       A new frontier 🚀
+    </motion.span>
+    <motion.span
+      className={`${lora1.className} italic text-maize text-4xl block mt-16`}
+      initial={{ opacity: 0, y: 20, scale: 0.7 }}
+      animate={{ opacity: 1, y: 0, scale: 1 }}
+      transition={{ delay: 2.5, duration: 1 }}
+    >
+      Coming soon...
     </motion.span>
   </motion.div>
 );
